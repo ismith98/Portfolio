@@ -10,11 +10,12 @@ body{
 	flex-direction:column;
 	height:100vh;
 	justify-content:center;
-	background-image: url("images/zenStones2.jpg");
+	background-image: url("images/mountain.jpg");
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position: center center;
 	padding-left:2.6rem;
+	padding-right: 2.6rem;
 }
 
 h1{
@@ -24,5 +25,10 @@ h1{
 }
 
 span{
-	font-size:1.1rem;
+	font-size:2rem;
+}
+
+/* Cursor */
+.txt{
+	border-right: 0.2rem solid #777;
 }
