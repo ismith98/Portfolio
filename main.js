@@ -1,19 +1,3 @@
-window.onload = init();
-
-function init() {
-	// The parent HTML element that will have a typing animation run on it
-	var txtElement = document.querySelector(".type");
-	
-	// The text that will be displayed in txtElement
-	var text = 'I am a curious and dependable computer science graduate who designs great ';
-	
-	//The descriptive words at the end of txtElement that will be cycled through
-	var descriptors = JSON.parse(txtElement.getAttribute("data-descriptors"));
-	
-	//Initialize typewriter
-	new TypeWriter(txtElement, text, descriptors).type();
-}
-
 class TypeWriter {
     constructor(txtElement, text, descriptors = {}) {
         this.txtElement = txtElement;
@@ -111,3 +95,31 @@ class TypeWriter {
 	
 	}
 }
+
+// Wait 300ms before animating the header on the homepage page
+window.onload = setTimeout(() => {
+	// Fade in the header on the main header on the homepage
+	let greeting = document.querySelector('#greeting');
+	greeting.classList.add('fade');
+	// After a second get the elements ready for the typing effect
+	setTimeout(init, 1000);
+}, 300)
+
+function init() {
+
+	// The parent HTML element that will have a typing animation run on it
+	var txtElement = document.querySelector(".type");
+	
+	// Add the cursor
+	txtElement.classList.add('txt');
+	
+	// The text that will be displayed in txtElement
+	var text = 'I am a curious and dependable computer science graduate who designs great ';
+	
+	//The descriptive words at the end of txtElement that will be cycled through
+	var descriptors = JSON.parse(txtElement.getAttribute("data-descriptors"));
+	
+	//Initialize typewriter
+	new TypeWriter(txtElement, text, descriptors).type();
+}
+
