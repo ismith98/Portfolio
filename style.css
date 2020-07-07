@@ -9,7 +9,7 @@ body{
 .full-page-container{
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+	grid-template-rows: 20vh 20vh 20vh 30vh 10vh;
 	background-image: url("images/mountain.jpg");
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -28,6 +28,7 @@ h1{
 	font-size:2.8rem;
 	margin-top:0;
 	margin-bottom: .3rem;
+	
 	opacity: 0;
 	transition: all 1s ease;
 	transform: translateY(-50px);
@@ -46,6 +47,46 @@ span{
 .txt{
 	border-right: 0.2rem solid #777;
 }
+
+#arrow-container{
+	grid-area: -2 / 3 ;
+	text-align:center;
+	
+}
+
+#homepage-down-arrow{
+  outline: none;
+  border: none;
+  background-color: rgba(255,255,255,.2);
+  border-radius: 50%;
+  
+	opacity: 0;
+	transition: all 1s ease;
+	transform: translateY(-20px);
+}
+
+#homepage-down-arrow.fade{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 13px;
+}
+
+.up {
+  margin: 0 5px 10px 5px;
+  transform: rotate(-135deg);
+}
+
+.down {
+  margin: 0 5px 10px 5px;
+  transform: rotate(45deg);
+}
+
 
 @media(max-width: 800px) {
 	h1{

@@ -79,7 +79,12 @@ class TypeWriter {
 					if(this.descriptorIndex == this.descriptors.length - 1) {
 						this.doneCycling = true;
 						//Remove the cursor after 1 seconds
-						setTimeout(() => {this.txtElement.removeAttribute("class"); }, 1000);
+						setTimeout(() => {
+							this.txtElement.removeAttribute("class"); 
+							// Transition in the down arrow
+							let downArrow = document.querySelector("#homepage-down-arrow");
+							downArrow.classList.add('fade');
+							}, 1000);
 					}
 					
 				}
