@@ -7,14 +7,22 @@ body{
 }
 
 .full-page-container{
-	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 20vh 20vh 20vh 30vh 10vh;
 	background-image: url("images/mountain.jpg");
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position: center center;
 	padding: 0 2.6rem;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 20vh 20vh 20vh 30vh 10vh;
+}
+
+#c2{
+	background-image:url("images/no-mountain2.jpg");
+	height: 100vh;
 }
 
 #text-container-1{
@@ -87,6 +95,55 @@ span{
   transform: rotate(45deg);
 }
 
+#text-container-2{
+	grid-area: 2 / 1 / span 1 / span 5;
+	text-align:center;
+}
+
+#mini-container{
+	background-image:none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: 15vh 20vh 20vh 20vh 20vh;
+	background-color: rgb(214,213,208);
+	order: -1;
+}
+
+#homepage-question{
+	opacity: 1;
+	color: black;
+}
+
+#choices{
+	grid-area: 2 / 1 / span 3 / span 5;
+	/*background-color: white;*/
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+img.polaroid {
+  width: 30%;
+  height: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#contact-info{
+	grid-area: -2 / 1 / span 1 / span 5;
+	text-align:center;
+	color:  black;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+img{
+	margin-top:15px;
+}
 
 @media(max-width: 800px) {
 	h1{
@@ -97,10 +154,14 @@ span{
 		font-size:1.3rem;
 	}
 	
+	img.polaroid {
+		width: 30%;
+		height: 50%;
+	}
 }
 
 @media(max-width: 500px) {
-	.container{
+	.full-page-container{
 		padding: 0 1.5rem
 	}
 	h1{

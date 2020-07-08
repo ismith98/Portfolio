@@ -107,8 +107,18 @@ window.onload = setTimeout(() => {
 	let greeting = document.querySelector('#greeting');
 	greeting.classList.add('fade');
 	// After a second get the elements ready for the typing effect
-	setTimeout(init, 1000);
+	setTimeout(init, 1300);
 }, 300)
+
+// Scroll down when the down arrow button is clicked
+let downArrow = document.querySelector("#homepage-down-arrow");
+downArrow.addEventListener('click', () => {
+	console.log('test')
+	var desiredHeight = $(window).height();
+	$('html, body').animate({scrollTop:desiredHeight}, 'slow');
+})
+
+// Scroll up when the up arrow button is clicked
 
 function init() {
 
