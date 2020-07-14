@@ -4,9 +4,14 @@ body{
 	font-family: 'Raleway', sans-serif;
 	margin: 0;
 	color: white;
+	background-image: url("images/no-mountain2.jpg");
 }
 
+/* container that fills 100% of the viewport (100vh)*/
 .full-page-container{
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 20vh 20vh 20vh 30vh 10vh;
 	background-image: url("images/mountain.jpg");
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -14,35 +19,27 @@ body{
 	padding: 0 2.6rem;
 }
 
-.grid{
-	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 20vh 20vh 20vh 30vh 10vh;
-}
-
-#c2{
-	background-image:url("images/no-mountain2.jpg");
-	height: 100vh;
-}
-
+/* Keep the heading and span on the homepage in this text container so text is not
+   pushed up if the typing effect goes onto another line */
 #text-container-1{
-	
 	grid-area: 3 / 1 / span 1/ span 5
 }
 
 
-
 h1{
 	font-size:2.8rem;
+	
+}
+
+#greeting{
 	margin-top:0;
 	margin-bottom: .3rem;
-	
 	opacity: 0;
 	transition: all 1s ease;
 	transform: translateY(-50px);
 }
 
-h1.fade{
+#greeting.fade{
 	opacity:1;
 	transform: translateY(0px);
 }
@@ -55,6 +52,8 @@ span{
 .txt{
 	border-right: 0.2rem solid #777;
 }
+
+/* -----------------Homepage navigation arrow--------------------------------*/
 
 #arrow-container{
 	grid-area: -2 / 3 ;
@@ -95,47 +94,52 @@ span{
   transform: rotate(45deg);
 }
 
-#text-container-2{
-	grid-area: 2 / 1 / span 1 / span 5;
-	text-align:center;
+/* -----------------------end of arrow-----------------------------------*/
+
+section{
+	text-align: center;
 }
 
 #mini-container{
-	background-image:none;
-	margin: 0;
-	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: 15vh 20vh 20vh 20vh 20vh;
+	min-height:90vh;
+	margin: 0 2rem;
+	margin-bottom: 10vh;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:space-around;
 	background-color: rgb(214,213,208);
-	order: -1;
 }
 
 #homepage-question{
-	opacity: 1;
 	color: black;
+	margin-top: 3.5rem;
 }
 
 #choices{
-	grid-area: 2 / 1 / span 3 / span 5;
-	/*background-color: white;*/
 	display: flex;
-	flex-flow: column-wrap;
-	justify-content: space-between;
+	flex-flow: row wrap;
+	justify-content: space-around;
 	align-items:center;
-	padding: 0 1rem;
+	margin-bottom: 2rem;
 }
 
 img.polaroid {
-  width: 28%;
-  height: 70%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin:1rem;
+	width: 28%;
+	height: 40vh;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img.polaroid:hover{
+	transform: none;
 }
 
 #contact-info{
-	grid-area: -2 / 1 / span 1 / span 5;
-	text-align:center;
+	display:flex;
+	align-items: baseline;
 	color:  black;
+	margin-bottom: 1rem;
 }
 
 a{
@@ -144,10 +148,10 @@ a{
 }
 
 img{
-	margin-top:15px;
+	/*margin-top:15px;*/
 }
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
 	h1{
 		font-size:2.3rem;
 	}
@@ -157,15 +161,24 @@ img{
 	}
 	
 	img.polaroid {
-		width: 30%;
-		height: 50%;
+		width: 40vw;
+		height: 40vh;
 	}
 }
 
 @media(max-width: 500px) {
+	/* Make the image bigger */
+	img.polaroid {
+		width: 80%;
+		height: 40vh;
+		
+	}
+	
 	#choices {
 		flex-direction: column;
 	}
+	
+	
 	
 	.full-page-container{
 		padding: 0 1.5rem
@@ -178,4 +191,8 @@ img{
 		font-size:1rem;
 	}
 	
+	/* move the homepage container down */
+	#homepage-question{
+		margin-top: 3.5rem;
+	}
 }
