@@ -120,13 +120,15 @@ span{
 	grid-area: 2 / 1 / span 3 / span 5;
 	/*background-color: white;*/
 	display: flex;
+	flex-flow: column-wrap;
 	justify-content: space-between;
 	align-items:center;
+	padding: 0 1rem;
 }
 
 img.polaroid {
-  width: 30%;
-  height: 80%;
+  width: 28%;
+  height: 70%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -161,6 +163,10 @@ img{
 }
 
 @media(max-width: 500px) {
+	#choices {
+		flex-direction: column;
+	}
+	
 	.full-page-container{
 		padding: 0 1.5rem
 	}
