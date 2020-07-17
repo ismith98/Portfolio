@@ -122,17 +122,50 @@ section{
 	justify-content: space-around;
 	align-items:center;
 	margin-bottom: 2rem;
+	width:100%;
 }
 
-img.polaroid {
+.polaroid-parent{
+	position:relative;
+	display:inline;
 	margin:1rem;
-	width: 28%;
+	width: 25vw;
 	height: 40vh;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-img.polaroid:hover{
-	transform: none;
+/* The link that is positioned over the image */
+.polaroid-container{
+	position:absolute;
+	left:0;
+	z-index:1;
+	width: inherit;
+	height: inherit;
+}
+
+/* The image with a polaroid effect */
+img.polaroid {
+	/*margin:1rem;*/
+	width: inherit;
+	height: inherit;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all .5s ease;
+	position:absolute;
+	left:0;
+}
+
+/* When the container is hovered over, increase the size of the image */
+.polaroid-container:hover ~ img.polaroid{
+	transform: scale(1.1, 1.1);
+}
+
+/* The text over each image */
+.title{
+	color: white;
+	text-shadow: 0 0 5px black;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #contact-info{
@@ -142,13 +175,25 @@ img.polaroid:hover{
 	margin-bottom: 1rem;
 }
 
+#contact-text{
+	/*margin-right: 2rem;*/
+	color: black;
+	/*white-space: pre;*/
+}
+
 a{
 	text-decoration: none;
 	color: white;
 }
 
-img{
-	/*margin-top:15px;*/
+#linkedin{
+	width:30px;
+	height:30px;
+	transition: all .5s ease;
+}
+
+#linkedin:hover{
+	transform: scale(1.1);
 }
 
 @media(max-width: 900px) {
@@ -160,7 +205,7 @@ img{
 		font-size:1.3rem;
 	}
 	
-	img.polaroid {
+	.polaroid-parent {
 		width: 40vw;
 		height: 40vh;
 	}
@@ -168,8 +213,8 @@ img{
 
 @media(max-width: 500px) {
 	/* Make the image bigger */
-	img.polaroid {
-		width: 80%;
+	.polaroid-parent {
+		width: 60vh;
 		height: 40vh;
 		
 	}
