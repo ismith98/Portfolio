@@ -14,8 +14,9 @@ window.onload = setTimeout(() => {
 let downArrow = document.querySelector("#homepage-down-arrow");
 downArrow.addEventListener('click', () => {
 	console.log('test')
-	var desiredHeight = $(window).height();
-	$('html, body').animate({scrollTop:desiredHeight}, 'slow');
+	var desiredHeight = window.innerHeight;  /*$(window).height();*/
+	window.scrollBy(0, desiredHeight);
+	/*$('html, body').animate({scrollTop:desiredHeight}, 'slow');*/
 })
 
 // Scroll up when the up arrow button is clicked
