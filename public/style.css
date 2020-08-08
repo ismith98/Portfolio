@@ -125,7 +125,7 @@ section{
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items:center;
-	margin-bottom: 2rem;
+	margin-bottom: 20px;
 	width:100%;
 }
 
@@ -133,9 +133,10 @@ section{
 	position:relative;
 	display:inline-block;
 	margin:1rem;
-	width: 25vw;
-	height: 40vh;
+	width: 300px;
+	height: 300px;
 	overflow:hidden;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.4);
 }
 
 /* The link that is positioned over the image */
@@ -152,7 +153,6 @@ img.polaroid {
 	/*margin:1rem;*/
 	width: inherit;
 	height: inherit;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: all .5s ease-out;
 	position:absolute;
 	left:0;
@@ -172,14 +172,14 @@ img.polaroid {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
+/*
 #contact-info{
 	display:flex;
 	align-items: baseline;
 	color:  black;
 	margin-bottom: 1rem;
 }
-
+*/
 #contact-text{
 	/*margin-right: 2rem;*/
 	color: black;
@@ -192,8 +192,8 @@ a{
 }
 
 #linkedin{
-	width:30px;
-	height:30px;
+	width:40px;
+	height:40px;
 	transition: all .5s ease;
 }
 
@@ -212,15 +212,15 @@ a{
 	
 	.polaroid-parent {
 		width: 40vw;
-		height: 40vh;
+		height: 40vw;
 	}
 }
 
 @media(max-width: 500px) {
 	/* Make the image bigger */
 	.polaroid-parent {
-		width: 60vh;
-		height: 40vh;
+		width: 70vw;
+		height: 70vw;
 		
 	}
 	

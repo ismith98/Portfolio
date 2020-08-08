@@ -83,7 +83,7 @@ export default class TypeWriter {
 							// Transition in the down arrow
 							let downArrow = document.querySelector("#homepage-down-arrow");
 							downArrow.classList.add('fade');
-							}, 1000);
+							}, 500);
 					}
 					
 				}
