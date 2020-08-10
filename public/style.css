@@ -111,7 +111,6 @@ section{
 	display: flex;
 	flex-direction: column;
 	align-items:center;
-	justify-content:space-around;
 	background-color: rgb(214,213,208);
 }
 
@@ -166,20 +165,14 @@ img.polaroid {
 /* The text over each image */
 .title{
 	color: white;
+	font-size: 2.7em;
 	text-shadow: 0 0 5px black;
 	position: absolute;
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-/*
-#contact-info{
-	display:flex;
-	align-items: baseline;
-	color:  black;
-	margin-bottom: 1rem;
-}
-*/
+
 #contact-text{
 	/*margin-right: 2rem;*/
 	color: black;
@@ -201,6 +194,92 @@ a{
 	transform: scale(1.1);
 }
 
+/*************************************************************/
+/* Projects page styles */
+/*************************************************************/
+
+.collapsibleContainer{
+	width: 90%;
+	margin-bottom:50px;
+}
+
+#sideProjs{
+	margin-bottom:50px;
+}
+
+.collapsible{
+	background-color: white;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 22px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+	background-color: #ccc;
+}
+
+.content {
+	color:black;
+	width:100%;
+	box-sizing: border-box;
+	padding: 0 18px;
+	overflow: hidden;
+	background-color: #f1f1f1;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+	text-align: center;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+ul{
+	list-style-type: none;
+	margin-top: 0;
+}
+
+li{
+	border-bottom: 1px black solid;;
+}
+
+h2{
+	margin-bottom: 5px;
+}
+
+.links{
+	color: blue;
+	font-size: 1rem;
+}
+
+.description{
+	font-size: 1rem;
+	margin-top: 5px;
+}
+
+.screenshot{
+	height:200px;
+	width:200px;
+}
+
+/*************************************************************/
+/* Media Queries */
+/*************************************************************/
+
 @media(max-width: 900px) {
 	h1{
 		font-size:2.3rem;
@@ -211,8 +290,8 @@ a{
 	}
 	
 	.polaroid-parent {
-		width: 40vw;
-		height: 40vw;
+		width: 350px;
+		height: 350px;
 	}
 }
 
