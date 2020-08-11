@@ -21,8 +21,12 @@ downArrow.addEventListener('click', () => {
 
 // Scroll up when the up arrow button is clicked
 
+var choices = document.querySelectorAll('.polaroid-parent');
+window.addEventListener('scroll', handleScroll);
+
 function init() {
 
+	
 	// The parent HTML element that will have a typing animation run on it
 	var txtElement = document.querySelector(".type");
 	
@@ -32,10 +36,33 @@ function init() {
 	// The text that will be displayed in txtElement
 	var text = 'I am a curious and dependable computer science graduate who designs great ';
 	
-	//The descriptive words at the end of txtElement that will be cycled through
+	// The descriptive words at the end of txtElement that will be cycled through
 	var descriptors = JSON.parse(txtElement.getAttribute("data-descriptors"));
 	
-	//Initialize typewriter
+	// Initialize typewriter
 	new TypeWriter(txtElement, text, descriptors).type();
+
+	// Check if the navigation choices are scrolled into view
+	handleScroll();
 }
+
+// When scrolled, check if the navigation choices if are in the viewport
+function handleScroll() {
+	choices.forEach((element, index)=> {
+		if(isScrolledIntoView(element))	element.classList.add('fade');
+	})
+
+}
+
+// Fade in the navigation choices if they scroll into view
+function isScrolledIntoView(element) {
+	//console.log(element)
+	const rect = element.getBoundingClientRect();
+	const top = rect.top;
+	const bottom = rect.bottom;
+
+	const isCompletlyVisible = (top >= 0) && (bottom <= window.innerHeight);
+	return isCompletlyVisible;
+}
+
 

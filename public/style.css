@@ -136,6 +136,15 @@ section{
 	height: 300px;
 	overflow:hidden;
 	box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+
+	opacity: 0;
+	transition: all 1.2s ease;
+	transform: translateY(-20px);
+}
+
+.polaroid-parent.fade{
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* The link that is positioned over the image */
@@ -214,7 +223,7 @@ a{
 	padding: 18px;
 	width: 100%;
 	border: none;
-	text-align: center;
+	text-align: left;
 	outline: none;
 	font-size: 22px;
 }
@@ -233,7 +242,7 @@ a{
 	background-color: #f1f1f1;
 	max-height: 0;
 	transition: max-height .2s ease-out;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .collapsible:after {
@@ -251,10 +260,25 @@ a{
 ul{
 	list-style-type: none;
 	margin-top: 0;
+	padding: 0;
 }
 
 li{
-	border-bottom: 1px black solid;;
+	border-bottom: 1px black solid;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.titleAndImage{
+	width: 225px;
+	text-align: center;
+}
+
+.liText{
+	text-align: left;
+	flex-grow: 1;
+	width: 200px;
 }
 
 h2{
@@ -264,6 +288,14 @@ h2{
 .links{
 	color: blue;
 	font-size: 1rem;
+	text-align: center;
+	margin-top: 24px;
+}
+
+/* The span that comes immediately after a link */
+.links + span{
+	color: black;
+	font-size: 16px;
 }
 
 .description{
@@ -294,7 +326,13 @@ h2{
 		height: 350px;
 	}
 }
-
+/*
+@media(max-width: 640px) {
+	li{
+		justify-content: center;
+	}
+}
+*/
 @media(max-width: 500px) {
 	/* Make the image bigger */
 	.polaroid-parent {
