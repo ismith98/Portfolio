@@ -21,9 +21,8 @@
     "browserify": "^16.5.2",
     "express": "^4.17.1",
     "moment": "^2.27.0",
-    "node-fetch": "^2.6.0"
-  },
-  "devDependencies": {
+    "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4"
-  }
+  },
+  "devDependencies": {}
 }
