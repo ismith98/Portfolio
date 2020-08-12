@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/ismith98/Portfolio#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "browserify": "^16.5.2",
+    "express": "^4.17.1",
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

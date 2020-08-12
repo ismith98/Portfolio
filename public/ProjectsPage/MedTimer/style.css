@@ -1,0 +1,341 @@
+/*************************************************************/
+/* General styles */
+/*************************************************************/
+
+body{
+	
+	
+	color: white;
+	
+	margin:0px;
+	background-image: url("zenStones2.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center center;
+}
+
+#bodyContainer{
+	display:flex;
+	height:100vh;
+	align-items: center;
+	justify-content:center;
+	flex-direction:column;
+}
+
+h1{
+	font-size:4rem;
+	margin: 20px 0;
+}
+
+/*************************************************************/
+/* Bordered Container styles */
+/*************************************************************/
+
+.container{
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, .45);
+	padding: 2px 10px 10px 10px;
+	width: 400px;
+	transform: translateY(0px);
+	transition: all 1s ease;
+}
+
+.meditating{
+	height:275px;
+	width: 275px;
+	border-radius: 50%;
+	transform: translateY(-30px);
+	position: relative;
+	transition: all 1s ease;
+}
+
+.hidden{
+	display: none;
+}
+
+.center{
+	/*text-align:center;*/
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+/*************************************************************/
+/* Form Elements styles */
+/*************************************************************/
+
+.formElementsGrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: end;
+}
+
+form{
+	width:100%;
+	height:100%;
+}
+
+label{
+	font-size: 1.5rem;
+	grid-column-start: 1;
+	padding-top: 10px;
+}
+
+button, input[type=select]{
+	cursor:pointer;
+}
+
+.inputContainer{
+	grid-column-start: 2;
+	margin: 0px 5px 1px 5px;
+	text-align:center;
+}
+
+.selectContainer{
+	grid-column-start: 2;
+	margin: 18px 5px 1px 5px;
+	text-align:center;
+}
+
+input, #submit, #closeButton{
+	border-radius: 5px;
+	border:2px solid #ccc;
+}
+
+
+input[type=number], select {
+	text-align:center;
+
+}
+
+input[type=number]:focus{
+	border-color: #333;
+}
+
+input, select, #submit, #closeButton{
+	width: 120px;
+	height: 35px;
+	/*margin: 15px 5px 1px 5px;*/
+}
+
+#submit{
+	margin: 15px 5px 1px 5px;
+}
+
+/*************************************************************/
+/* Countdown screen */
+/*************************************************************/
+
+#countdownContainer{
+	position: absolute;
+    text-align: center;
+    top: 20%;
+}
+
+#countdown{
+	margin-bottom: 0;
+	font-size: 4.5rem;
+}
+
+#endSessionButtonContainer{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+#finish, #discard{
+	width: 120px;
+	height: 35px;
+	margin: 10px 0;
+}
+
+#discard{
+	margin-bottom: 0;
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.button.pause{
+	font-size: 25px;
+	opacity:0;
+	transition: all 1s ease;
+	transform: translateY(-20px);
+	
+}
+
+.button.pause.fadein{
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+/* Center the unicode for the pause button */
+#pauseText{
+	position: absolute;
+    left: 5px;
+    top: 13px;
+}
+
+.play{
+	font-size:50px;
+}
+.button{
+	position:absolute;
+	bottom: 5%;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	color: white;
+	border-color: white;
+    background-color: rgba(0,0,0,.45);
+	border-width:2px;
+	
+}
+
+#durationErrMsg, #warmupErrMsg{
+	color: red;
+	font-size: 10px;
+	
+}
+
+/*************************************************************/
+/* Stats Button styles */
+/*************************************************************/
+
+#statsButton{
+	position:absolute;
+	top:5%;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+	border-color: white;
+}
+
+#statsButton i{
+	color:#9cad5d;
+}
+
+
+
+/*************************************************************/
+/* Stats Screen styles */
+/*************************************************************/
+
+
+/*************************************************************/
+/* Recap Screen styles */
+/*************************************************************/
+#consecutiveDaysTitle{
+	font-size: 2em;
+	
+}
+
+#daysIcons{
+	display:flex;
+	
+}
+
+.dayIcon{
+	border: 1px black solid;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 10px 3px;
+}
+
+.dayIcon.completed {
+	background-color:white;
+	color:black;
+}
+
+#closeButton{
+	margin: 60px 5px 1px 5px;
+}
+
+#consecutiveDaysTitle {
+	margin-top: 20px;
+}
+
+#congratsMessage{
+	margin-top:0;
+	font-size: 1.5em;
+}
+
+.currentDay{
+	transition: all 2s ease;
+}
+
+/*************************************************************/
+/* Foooter */
+/*************************************************************/
+
+#footer{
+	height:20px;
+	width:100%;
+	position: relative;
+	bottom: 0;
+	background-color: rgba(255,0,0,.8);
+}
+
+
+
+
+/*************************************************************/
+/* Screen size reactivity */
+/*************************************************************/
+
+@media (max-width: 500px) {
+	.container{
+		width: 80%;
+	}
+	.meditating{
+		width: 70vw;
+		height:70vw;
+	}
+	h1{
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 400px) {
+	/*.container{
+		width: 80%;
+	}
+	.meditating{
+		width: 70vw;
+		height:70vw;
+	}*/
+	h1{
+		font-size: 2.7rem;
+	}
+}
+
+@media (max-height: 400px) {
+
+	input, select, #submit, #closeButton{
+	height: 35px;
+}
+	
+	.meditating{
+		width: 200px;
+		height: 200px;
+	}
+	h1{
+		font-size: 2.7rem;
+		margin: 10px 0;
+	}
+}
+
+/*Hide Input Number Arrows chrome, edge, etc.*/
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Hide Input Number Arrows mozilla*/
+input[type=number] {
+  -moz-appearance: textfield;
+}

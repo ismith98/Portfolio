@@ -1,3 +1,3 @@
-import CollapsibleMenus from '/CollapsibleMenus.js';
+import CollapsibleMenus from './CollapsibleMenus.js';
 
 new CollapsibleMenus().start();
