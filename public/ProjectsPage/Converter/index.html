@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+    <link rel='stylesheet' href='/ProjectsPage/Converter/style.css'>
+</head>
+<body>
+	<h1>Foreign Currency Converter</h1>
+	<div class='container'>
+	    <span id='currencyTitle1'>
+	    	<span id='topQuantityHeader'></span> 
+	    	<span id='topCurrencyHeader'></span> 
+	    	equals
+	    </span>
+	    <div id='currencyTitle2'>
+	    	<h2 id='bottomQuantityHeader'></h2> 
+	    	<h2 id='bottomCurrencyHeader'></h2> 
+	    	
+	    </div>
+	    
+	    <span>
+	    	<span id="date"></span>
+	    	 - Disclaimer
+	    </span>
+	    
+	    <form>
+	    	<input type="number" min="0" value="1" name="topQuantityInput" id="topQuantityInput">
+	    	<select id="topDropDownMenu" name="topDropDownMenu">
+	    	
+	    	</select>
+	    	
+	    	<br>
+	    	
+	    	<input type="number" min="0" name="bottomQuantityInput" id="bottomQuantityInput">
+	    	<select id="bottomDropDownMenu" name="bottomDropDownMenu">
+	    	
+	    	</select>
+	    </form>
+    </div>
+    <script type="module"  src="/ProjectsPage/Converter/converter.js"></script>
+</body>
+</html>

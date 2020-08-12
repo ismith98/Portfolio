@@ -20,7 +20,8 @@
   "dependencies": {
     "browserify": "^16.5.2",
     "express": "^4.17.1",
-    "moment": "^2.27.0"
+    "moment": "^2.27.0",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
