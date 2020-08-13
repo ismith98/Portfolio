@@ -82,7 +82,7 @@ span{
 }
 
 .arrow {
-  border: solid black;
+  border: solid white;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 13px;
@@ -344,19 +344,15 @@ h2{
 	#choices {
 		flex-direction: column;
 	}
-	
-	
-	
+
 	.full-page-container{
 		padding: 0 1.5rem
 	}
 	h1{
-		font-size:2rem;
+		font-size:2.5rem;
 	}
 	
-	span{
-		font-size:1rem;
-	}
+
 	
 	/* move the homepage container down */
 	#homepage-question{
