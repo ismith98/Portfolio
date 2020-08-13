@@ -6084,7 +6084,7 @@ endingBell.addEventListener('input', () => {
 	pauseSound(previousSound);
 
 	// Play a prieview of the selected sound
-	playSound(startingBell);
+	playSound(endingBell);
 });
 
 // Start and stop the timer with the pause and play buttons
