@@ -1,4 +1,4 @@
-import TypeWriter from 'homepage/TypeWriter.js';
+import TypeWriter from './homepage/TypeWriter.js';
 
 
 // Wait 300ms before animating the header on the homepage page
