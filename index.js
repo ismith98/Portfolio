@@ -7,8 +7,9 @@ var PORT = process.env.PORT || 3000;
 
 //app.use(express.static(path.join(__dirname + '/images')))
 console.log(path.join(__dirname, './public'));
+console.log(path.join(__dirname, 'public'));
 app
-  .use(express.static(path.join(__dirname, './public')))
+  .use(express.static(path.join(__dirname, 'public')))
   /*
   .use(express.static(path.join(__dirname, '/public/ProjectsPage' )))
   .use(express.static(path.join(__dirname, '/public/ProjectsPage/MedTimer' )))
