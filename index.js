@@ -14,7 +14,7 @@ app
   .use(express.static(path.join(__dirname, '/public/ProjectsPage' )))
   .use(express.static(path.join(__dirname, '/public/ProjectsPage/MedTimer' )))
   .use(express.static(path.join(__dirname, '/public/ProjectsPage/MedTimer/audio' )))*/
-  .get('/', (req,res) => res.sendFile(path.join(__dirname, '../public/HomePage/index.html')))
+  .get('/', (req,res) => res.sendFile(path.join(__dirname, '../public/homepage/index.html')))
   .get('/projects',(req,res) => {res.sendFile(path.join(__dirname, '../public/ProjectsPage/projects.html'))})
   .get('/projects/MeditationTimer', (req,res) => res.sendFile(path.join(__dirname, '../public/ProjectsPage/MedTimer/index.html')))
   .get('/projects/Converter', (req,res) => res.sendFile(path.join(__dirname, '../public/ProjectsPage/Converter/index.html')))
