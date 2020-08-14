@@ -4,8 +4,8 @@
     "start_url": "/projects/MeditationTimer",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#acd94f",
-    "theme_color": "#acd94f",
+    "background_color": "#d8c14e",
+    "theme_color": "#65d84e",
     "icons": [
         {
             "src": "/images/appIcon96x96.png",
