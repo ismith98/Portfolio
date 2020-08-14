@@ -5672,6 +5672,11 @@
 var moment = require('moment');
 moment().format();
 
+if('serviceWorker' in navigator){
+	navigator.serviceWorker.register('/sw.js')
+	// { scope: '/projects/MeditationTimer' })
+		.then(() => console.log('SW registered'));
+}
 
 //Set up a couple of global variables
 var timerStats = {};
