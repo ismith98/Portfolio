@@ -1,9 +1,9 @@
-
+const cacheName = 'v1';
 
 self.addEventListener('install', event => {
     console.log('SW installed');
     event.waitUntil(
-        caches.open('static')
+        caches.open(cacheName)
         .then(cache => { 
             cache.addAll([
                 '/projects/MeditationTimer',
@@ -24,8 +24,21 @@ self.addEventListener('install', event => {
     
 });
 
-self.addEventListener('activate', () => {
+self.addEventListener('activate', event => {
     console.log('SW Activated');
+    // Remove unwanted caches
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cache => {
+                    if(cache !== cacheName) {
+                        console.log('Service Worker: clearing old cache');
+                        return caches.delete(cache);
+                    }
+                })
+            )
+        })
+    )
 });
 
 self.addEventListener('fetch', event => {

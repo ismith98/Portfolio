@@ -286,6 +286,7 @@ function dispalyRecapScreen() {
 	// Functionality for the close button: return to homescreen
 	let closeButton = document.querySelector("#closeButton");
 	closeButton.addEventListener("click", () => {
+		pauseSound(previousSound);
 		recapScreen.classList.add("hidden");
 		displayHomeScreen();
 	})
