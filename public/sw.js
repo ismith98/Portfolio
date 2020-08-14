@@ -1,4 +1,4 @@
-const cacheName = 'v1';
+const cacheName = 'v2';
 
 self.addEventListener('install', event => {
     console.log('SW installed');
@@ -12,9 +12,9 @@ self.addEventListener('install', event => {
                 '/ProjectsPage/MedTimer/main.js',
                 '/ProjectsPage/MedTimer/style.css',
                 '/ProjectsPage/MedTimer/zenStones2.jpg',
-                '/ProjectsPage/MedTimer/audio/bell.mp3',
-                '/ProjectsPage/MedTimer/audio/kangse.mp3',
-                '/ProjectsPage/MedTimer/audio/ombu.mp3',
+                '/ProjectsPage/MedTimer/audio/bell2.mp3',
+                '/ProjectsPage/MedTimer/audio/kangse2.mp3',
+                '/ProjectsPage/MedTimer/audio/ombu2.mp3',
                 "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css",
                 '/images/favicon.ico',
                 "/ProjectsPage/MedTimer/manifest.json"
