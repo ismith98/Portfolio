@@ -16,6 +16,7 @@ app
   .use(express.static(path.join(__dirname, '/public/ProjectsPage/MedTimer/audio' )))*/
   .get('/', (req,res) => res.sendFile(path.join(__dirname, '/public/homepage/index.html')))
   .get('/projects',(req,res) => {res.sendFile(path.join(__dirname, '/public/ProjectsPage/projects.html'))})
+  .get('/homelessness', (req, res) => res.sendFile(path.join(__dirname, '/public/homelessness/homelessness.html')))
   .get('/projects/MeditationTimer', (req,res) => res.sendFile(path.join(__dirname, '/public/ProjectsPage/MedTimer/index.html')))
   .get('/projects/Converter', (req,res) => res.sendFile(path.join(__dirname, '/public/ProjectsPage/Converter/index.html')))
   .get('/projects/Converter/Exchange', async(req, res) => createProxyServer(req, res))
