@@ -102,6 +102,7 @@ span{
 
 section{
 	text-align: center;
+	color: black;
 }
 
 #mini-container{
@@ -309,6 +310,16 @@ h2{
 }
 
 /*************************************************************/
+/* Homelessness page styles */
+/*************************************************************/
+#invisiblePplLink{
+	color: #84509b;
+}
+
+
+
+
+/*************************************************************/
 /* Media Queries */
 /*************************************************************/
 
@@ -324,6 +335,11 @@ h2{
 	.polaroid-parent {
 		width: 350px;
 		height: 350px;
+	}
+	iframe{
+		width: 356px;
+		height: 200px
+		
 	}
 }
 /*
@@ -352,10 +368,13 @@ h2{
 		font-size:2.5rem;
 	}
 	
-
-	
 	/* move the homepage container down */
 	#homepage-question{
 		margin-top: 3.5rem;
+	}
+
+	iframe{
+		width: 300px;
+		height: 175px;
 	}
 }
